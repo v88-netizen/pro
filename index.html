@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Happy Birthday PGL</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #000;
+            color: #fff;
+        }
+        .page {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-size: cover;
+            background-position: center;
+        }
+        .active {
+            display: flex;
+        }
+        h1 {
+            font-size: 3em;
+            color: #ff69b4;
+            margin-bottom: 0.2em;
+        }
+        h2 {
+            font-size: 2em;
+            color: #fff;
+        }
+        button {
+            margin-top: 2em;
+            padding: 1em 2em;
+            font-size: 1.2em;
+            background-color: #ff69b4;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+        .signature {
+            position: absolute;
+            bottom: 30px;
+            right: 40px;
+            font-size: 1.3em;
+        }
+    </style>
+</head>
+<body>
+    <audio autoplay>
+        <source src="minion_happybirthday.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <div class="page active" id="page1" style="background-image: url('HAPPYBIRTHDAY.jpg');">
+        <div>
+            <h1>🎂 Happy Birthday PGL 🎂</h1>
+            <h2><b>Abhyas Kar</b></h2>
+            <button onclick="nextPage()">Click to open 🎁</button>
+        </div>
+    </div>
+
+    <div class="page" id="page2" style="background-image: url('download (2).jpg');">
+        <div>
+            <h2><b>Wishing you amazing years of life ahead! 🎉🎈💖</b></h2>
+            <div class="signature">– Vedika</div>
+        </div>
+    </div>
+
+    <script>
+        function nextPage() {
+            document.getElementById('page1').classList.remove('active');
+            document.getElementById('page2').classList.add('active');
+        }
+    </script>
+</body>
+</html>
